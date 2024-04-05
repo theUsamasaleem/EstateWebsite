@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="16x16" />
+    <title>SzabistEstate | Online property Rental Platform For Buyer , Seller</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<style type="text/css">
+    .dropbtn {
+        color: white;
+        font-size: 16px;
+        border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+</style>
+
+<body>
+
+
+    <!--main content wrapper start-->
+    <div class="main-wrapper">
+
+        <!--header area start-->
+        <header class="header-style-one header-sticky">
+
+            <div class="at_header_nav">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6 col-lg-2">
+                            <div class="logo-wrapper">
+                                <a href="#"><img src="assets/img/SElogo.png" class="w-100" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-10">
+                            <div class="at_header_right d-flex align-items-center justify-content-end">
+                                <nav class="at_nav_menu d-none d-lg-block">
+                                    <ul>
+                                        <li class=""><a href="#">Home</a></li>
+                                        <li class=""><a href="#">About</a></li>
+                                        <li class=""><a href="#">Property</a></li>
+                                        <li class=""><a href="#">Installment</a></li>
+                                        <li class=""><a href="#">Pricing</a></li>
+                                        <li class=""><a href="#">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <a href="user_login.php" class="listing-btn text-white ms-4 d-none d-sm-block"><span
+                                        class="icon-wrapper d-inline-flex align-items-center justify-content-center rounded-circle text-white me-2"><i
+                                            class="fa-solid fa-user"></i></span>Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--header area end-->
+
+        <section class="dealership-hero position-relative overflow-hidden">
+            <div class="swiper at-hero-slider-wrapper" data-speed="900">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="dl-hero-single">
+                            <div class="container">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-xl-7">
+                                            <div class="at-hero-title">
+                                                <h4 class="text-white mb-4 mt-3">Search properties for sale in Pakistan _____</h4>
+                                                <h1 class="text-white mb-4 mt-3 display-4">Pakistan's most profitable sectors.</h1>
+                                                <p class="mb-30"> since it provides: </p>
+                                                <ul class="property-info mt-3 mb-30 fs-md fw-500">
+                                                    <li class="pt-1"><span class="me-2"><i
+                                                                class="fa-regular fa-circle-check"></i></span>Safe</li>
+                                                    <li class="pt-1"><span class="me-2"><i
+                                                                class="fa-regular fa-circle-check"></i></span>Timely</li>
+                                                    <li class="pt-1"><span class="me-2"><i
+                                                                class="fa-regular fa-circle-check"></i></span>Healthy returns on investment</li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-5">
+                                            <div class="at-hero-banner position-relative mt-4 mt-sm-0">
+                                                <img src="assets/img/property-10.jpg" alt="property"
+                                                    class="at_hero_property">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+
+        </section>
+        <!--hero section end-->
+
+        <!--search box -->
+        <div class="at-search-box overflow-hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="at-search-box-filter bg-white">
+                            <ul class="nav nav-tabs border-0 ojustify-content-center justify-content-sm-start">
+                                <li><a href="#all_status" data-bs-toggle="tab" class="active">All Status</a></li>
+                                <li><a href="#new_property" data-bs-toggle="tab">New Houses</a></li>
+                                <li><a href="#used_property" data-bs-toggle="tab">Shops</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="all_status">
+                                    <form action="#" class="at-search-filter d-flex align-items-center">
+                                        <div class="input-field">
+                                            <label>Keyword</label>
+                                            <select class="form-select">
+                                                <option>House</option>
+                                                <option>Flat</option>
+                                                <option>Shop</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Select Type</label>
+                                            <select class="form-select">
+                                                <option>All</option>
+                                                <option>Rent</option>
+                                                <option>Sell</option>
+                                               
+                                            </select>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>City</label>
+                                            <select class="form-select">
+                                                <option>Karachi</option>
+                                                <option>Lahore</option>
+                                                <option>Islamabad</option>
+                                                <option>Faisalabad</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Bedrooms</label>
+                                            <select class="form-select">
+                                                <option>Any</option>
+                                                <option>1-2</option>
+                                                <option>3-4</option>
+                                            </select>
+                                        </div>
+                                        <div class="submit-btn align-self-end">
+                                            <button class="btn btn-secondary btn-md" type="submit">Search Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+        <!--search box end-->
+
+
+        <!--latest collection start-->
+        <section class="latest-collection">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6">
+                        <div class="at-section-title text-center text-lg-start">
+                            <span class="at-subtitle lead text-primary">Latest Property</span>
+                            <h2 class="h1 mt-2 mb-0">Find the Best Deals For You</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 align-self-end">
+                        <div
+                            class="collection-filter-controls d-flex align-items-center justify-content-center justify-content-lg-end flex-wrap mt-5 mt-lg-0">
+                            <button class="at-filter-btn active" data-filter="*">Latest Property</button>
+                            <button class="at-filter-btn" data-filter=".featured">Featured</button>
+                            <button class="at-filter-btn" data-filter=".popular">Popular</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-items-wrapper mt-5">
+                    <div class="row g-4 justify-content-center filter-grid">
+                        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 latest">
+                            <div class="filter-propertyd-item position-relative overflow-hidden rounded bg-white">
+                                <a href="#" class="icon-btn compare-btn position-absolute"><i
+                                        class="fa-solid fa-compress"></i></a>
+                                <a href="#" class="icon-btn wish-btn position-absolute"><i
+                                        class="fa-solid fa-heart"></i></a>
+                                <span class="date position-absolute">2022</span>
+                                <div class="feature-thumb position-relative overflow-hidden">
+                                    <a href="inventory-details.html"><img src="assets/img/property-1.jpg" alt="property"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="filter-propertyd-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta">$174,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5>Lahore,DHA Phase 6</h5>
+                                    </a>
+                                    <span class="meta-content"><strong>Listed by:</strong> <a href="#">
+                                            PakistanEstate</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="propertyd-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-speedometer"></i></span>
+                                            200 Sqaure yard
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-steering-wheel"></i></span>
+                                            West open
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-petrol"></i></span>
+                                           leased
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn outline-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 latest">
+                            <div class="filter-propertyd-item position-relative overflow-hidden rounded bg-white">
+                                <a href="#" class="icon-btn compare-btn position-absolute"><i
+                                        class="fa-solid fa-compress"></i></a>
+                                <a href="#" class="icon-btn wish-btn position-absolute"><i
+                                        class="fa-solid fa-heart"></i></a>
+                                <span class="date position-absolute">2020</span>
+                                <div class="feature-thumb position-relative overflow-hidden">
+                                    <a href="inventory-details.html"><img src="assets/img/property-4.jpg" alt="property"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="filter-propertyd-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta">$154,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5>Karachi ,DHA Phase 4</h5>
+                                    </a>
+                                    <span class="meta-content"><strong>Listed by:</strong> <a href="#">
+                                            KarachiEstate</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="propertyd-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-speedometer"></i></span>
+                                            200 Sqaure yard
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-steering-wheel"></i></span>
+                                            West open
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-petrol"></i></span>
+                                           leased
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn outline-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 latest">
+                            <div class="filter-propertyd-item position-relative overflow-hidden rounded bg-white">
+                                <a href="#" class="icon-btn compare-btn position-absolute"><i
+                                        class="fa-solid fa-compress"></i></a>
+                                <a href="#" class="icon-btn wish-btn position-absolute"><i
+                                        class="fa-solid fa-heart"></i></a>
+                                <span class="date position-absolute">2021</span>
+                                <div class="feature-thumb position-relative overflow-hidden">
+                                    <a href="inventory-details.html"><img src="assets/img/property-2.jpg" alt="property"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="filter-propertyd-content">
+                                    <div class="price-btn text-end position-relative">
+                                        <span class="small-btn-meta">$574,900</span>
+                                    </div>
+                                    <a href="inventory-details.html" class="mt-4 d-block">
+                                        <h5>Islamabad, Blue Area</h5>
+                                    </a>
+                                    <span class="meta-content"><strong>Listed by:</strong> <a href="#">
+                                            IslamabadEstate</a></span>
+                                    <hr class="spacer mt-3 mb-3">
+                                    <div class="propertyd-feature-box d-flex align-items-center mb-4">
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-speedometer"></i></span>
+                                            200 Sqaure yard
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-steering-wheel"></i></span>
+                                            West open
+                                        </div>
+                                        <div class="icon-box d-flex align-items-center">
+                                            <span class="me-2"><i class="flaticon-petrol"></i></span>
+                                           leased
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn outline-btn btn-sm d-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                     
+
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        <!--latest collection end-->
+
+
+        <!--about section start-->
+        <section class="about-section pt-120 pb-220 bg-primary-light position-relative z-1 overflow-hidden"
+            data-background="assets/img/shapes/about-bg.jpg">
+            
+            <span class="small-circle-shape position-absolute z--1"></span>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-left position-relative z-1">
+                            <span class="circle-large position-absolute z--1"></span>
+                            <div class="at-section-title mb-20">
+                                <span class=" lead text-primary">Why Choose Us</span>
+                                <h2 class="h1 mt-2 mb-4">Don't Waste Your <br> Valuable Time or Money</h2>
+                                <p>Collaboratively leverage existing client-centric schemas integrated processes. Inter
+                                    actively engineer global sources after team driven niche markets. Rapidiously
+                                    processes with resource maximizing architectures.</p>
+                            </div>
+                            <img src="assets/img/slide-about-1.jpg" alt="property" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-right mt-5 mt-lg-0">
+                            <div class="about-icon-box bg-white shadow rounded">
+                                <div class="ab-icon-box-top d-flex align-items-center mb-3">
+                                    <span
+                                        class="icon-wrapper d-flex align-items-center justify-content-center rounded"><i
+                                            class="flaticon-shield"></i></span>
+                                    <h5 class="mb-0 ms-3">Expert Certified Agents</h5>
+                                </div>
+                                <p class="mb-0">Yes, foreigners can own the land, after incorporation of company in SECP. However, land is a provincial subject in Pakistan and regulations for land acquisition varies from province to province.</p>
+                            </div>
+                            <div class="about-icon-box bg-white shadow rounded mt-20 ms-md-5">
+                                <div class="ab-icon-box-top d-flex align-items-center mb-3">
+                                    <span
+                                        class="icon-wrapper d-flex align-items-center justify-content-center rounded"><i
+                                            class="flaticon-shield"></i></span>
+                                    <h5 class="mb-0 ms-3"> Real estate good in Pakistan</h5>
+                                </div>
+                                <p class="mb-0">This business is one of Pakistan's most profitable sectors since it provides safe, timely, and healthy returns on investment. Investing in the real estate market, on the other hand, entails more than just buying at a lower price and selling at a higher price.</p>
+                            </div>
+                            <div class="about-icon-box bg-white shadow rounded mt-20">
+                                <div class="ab-icon-box-top d-flex align-items-center mb-3">
+                                    <span
+                                        class="icon-wrapper d-flex align-items-center justify-content-center rounded"><i
+                                            class="flaticon-price-tag"></i></span>
+                                    <h5 class="mb-0 ms-3">Get Tax calculated</h5>
+                                </div>
+                                <p class="mb-0">A resident person owning immovable property in Pakistan will be taxed on deemed income for tax year 2022 and onwards. Such deemed income shall be computed as 5% of the Fair Market Value of the immovable property. The rate of tax on such income is prescribed as 20%..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--about section end-->
+
+        
+
+
+
+        <!--faq & app section start-->
+        <section class="merge-section position-relative z-1 overflow-hidden">
+            <div class="faq-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="at-section-title text-center">
+                                <span class=" lead text-primary">FAQ</span>
+                                <h2 class="h1 mb-0 mt-2">Frequently Ask Question</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <div class="faq-tabs mt-5 brands-filter">
+                                <ul class="nav nav-tabs border-0 justify-content-center">
+                                    <li><a href="#general" data-bs-toggle="tab" class="active"><span class="me-2"><i
+                                                    class="fa-solid fa-users"></i></span>General Questions</a></li>
+                                    <li><a href="#features" data-bs-toggle="tab"><span class="me-2"><i
+                                                    class="fa-solid fa-property-side"></i></span>Property Tax</a></li>
+                                    <li><a href="#technical" data-bs-toggle="tab"><span class="me-2"><i
+                                                    class="fa-solid fa-screwdriver-wrench"></i></span>Paper Work
+                                            </a></li>
+                                </ul>
+                                <div class="tab-content mt-60">
+                                    <div class="tab-pane fade show active" id="general">
+                                        <div class="row g-4">
+                                            <div class="col-xl-6">
+                                                <div class="accordion theme-accordion" id="accordion_1">
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header">
+                                                            <a href="#ac_1" class="accordion-button"
+                                                                data-bs-toggle="collapse">01 What are property rights in Pakistan?</a>
+                                                        </div>
+                                                        <div class="accordion-collapse collapse show" id="ac_1"
+                                                            data-bs-parent="#accordion_1">
+                                                            <div class="accordion-body">
+                                                                <p>Article 172 states that: 'Every citizen shall have the right to acquire, hold and dispose of property in any part of Pakistan, subject to the Constitution and any reasonable restrictions imposed by law in the public interest'.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header">
+                                                            <a href="#ac_2" class="accordion-button collapsed"
+                                                                data-bs-toggle="collapse">02 How property is transferred in Pakistan?</a>
+                                                        </div>
+                                                        <div class="accordion-collapse collapse" id="ac_2"
+                                                            data-bs-parent="#accordion_1">
+                                                            <div class="accordion-body">
+                                                                <p>According to the transfer of property act, three scenarios allow you to transfer property ownership in Pakistan. Inheritance – Transfer of property ownership after someone's death. Gift – Property transferred to someone as a gift. Buying or selling – Transfer of ownership under the context of buying property.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header">
+                                                            <a href="#ac_3" class="accordion-button collapsed"
+                                                                data-bs-toggle="collapse">03 Can foreigners own property in Pakistan?
+                                                         </a>
+                                                        </div>
+                                                        <div class="accordion-collapse collapse" id="ac_3"
+                                                            data-bs-parent="#accordion_1">
+                                                            <div class="accordion-body">
+                                                                <p>Yes, foreigners can own the land, after incorporation of company in SECP. However, land is a provincial subject in Pakistan and regulations for land acquisition varies from province to province.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="accordion theme-accordion" id="accordion_2">
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header">
+                                                            <a href="#acc_1" class="accordion-button"
+                                                                data-bs-toggle="collapse">04 Types of property?</a>
+                                                        </div>
+                                                        <div class="accordion-collapse collapse show" id="acc_1"
+                                                            data-bs-parent="#accordion_2">
+                                                            <div class="accordion-body">
+                                                                <p>In economics and political economy, there are three broad forms of property: private property, public property, and collective property (also called cooperative property).</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                             
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header">
+                                                            <a href="#acc_3" class="accordion-button collapsed"
+                                                                data-bs-toggle="collapse">05 What is the concept of property?</a>
+                                                        </div>
+                                                        <div class="accordion-collapse collapse" id="acc_3"
+                                                            data-bs-parent="#accordion_2">
+                                                            <div class="accordion-body">
+                                                                <p>Dynamically reintermediate virtual functionalities
+                                                                    for bandwidth. Uniquely expedite cooperative
+                                                                    strategic theme areas and sticky e-markets.
+                                                                    Holisticly synergize alternative metrics for
+                                                                    multifunctional outsourcing without ubiquitous total
+                                                                    linkage.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <div class="accordion-header">
+                                                            <a href="#acc_4" class="accordion-button collapsed"
+                                                                data-bs-toggle="collapse">06 How property is transferred in Pakistan?</a>
+                                                        </div>
+                                                        <div class="accordion-collapse collapse" id="acc_4"
+                                                            data-bs-parent="#accordion_2">
+                                                            <div class="accordion-body">
+                                                                <p>– Transfer of property ownership after someone's death. Gift – Property transferred to someone as a gift. Buying or selling – Transfer of ownership under the context of buying property.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>          
+        </section>
+        <!--faq & app section end-->
+
+        <!--blog section start-->
+        <section class="blog-section pt-120 overflow-hidden pb-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="at-section-title text-center">
+                            <span class="at-subtitle text-primary lead">Recent News & Update</span>
+                            <h2 class="mt-1 h1">Upcoming Property & Events</h2>
+                            <p class="mb-0">Buying or selling – Transfer of ownership under the context of buying property.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--footer section start-->
+        <footer class="footer-section">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-xl-6">
+                            <div class="footer-banner position-relative bg-primary z-3 rounded">
+                                
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="footer-banner-left">
+                                            <span
+                                                class="icon-wrapper d-flex align-items-center justify-content-center rounded"><i
+                                                    class="flaticon-search"></i></span>
+                                            <h3 class="text-white mt-3 mb-20">Are You Looking to Buy New Property?</h3>
+                                            <a href="" class="at-explore-btn text-white">
+                                        Search Property
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-end">
+                                        <div class="footer-banner-right">
+                                            <img src="assets/img/SElogo.png" alt="property" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="footer-banner position-relative banner-gradient z-3 rounded">
+                               
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="footer-banner-left">
+                                            <span
+                                                class="icon-wrapper d-flex align-items-center justify-content-center rounded"><i
+                                                    class="flaticon-budget"></i></span>
+                                            <h3 class="text-white mt-3 mb-20">Are You Looking to Sell your Property?</h3>
+                                            <a href="" class="at-explore-btn text-white">
+                                              
+                                                </span>Sale your Property
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-end">
+                                        <div class="footer-banner-right">
+                                            <img src="assets/img/SElogo.png" alt="property" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wrapper pt-120 position-relative z-1 overflow-hidden has-banner"
+                data-background="assets/img/shapes/texture-bg.png">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="footer-widget widget-basic">
+                                <img src="assets/img/SElogo.png">
+                                <h3 class="widget-title-large mb-4 pt-1 text-white"><br>Have a Question?<br> Feel Free to
+                                    Ask</h3>
+                                <p class="mb-40">We are available at your service!</p>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="ms-lg-5 ms-xl-0 mt-5 mt-lg-0">
+
+                                <div class="row mt-30">
+                                    <div class="col-sm-4">
+                                        <div class="footer-widget footer-nav-widget mb-5 mb-sm-0">
+                                            <h6 class="widget-title text-white mb-3">Quick links</h6>
+                                            <ul class="footer-nav">
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Property</a></li>
+                                                <li><a href="#">Installment</a></li>
+                                                <li><a href="#">Pricing</a></li>
+                                                <li><a href="#">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="footer-widget footer-nav-widget mb-5 mb-sm-0">
+                                            <h6 class="widget-title text-white mb-3">Property Location</h6>
+                                            <ul class="footer-nav">
+                                                <li><a href="#">Karachi</a></li>
+                                                <li><a href="#">Islamabad</a></li>
+                                                <li><a href="#">Hyderabad</a></li>
+                                                <li><a href="#">Faisalabad</a></li>
+                                                <li><a href="#">Lahore</a></li>
+                                                <li><a href="#">Peshawar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="footer-widget footer-nav-widget mb-5 mb-sm-0">
+                                            <h6 class="widget-title text-white mb-3">Contact</h6>
+                                            <ul class="footer-nav">
+                                                <li><a href="#">Phone: 0210562451</a></li>
+                                                <li><a href="#">Location: Headoffice, Karachi</a></li>
+                                                <li><a href="#">Email:info@SzabistEstate.org</a></li>
+                                              
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-sm-7">
+                                <div class="copyright-text">
+                                    <p class="mb-0">&copy; All rights reserved - Made by <a href="">SzabistEstate - Group Member: Huzaifa And Jabbar</a></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="copyright-links text-start text-sm-end mt-1 mt-sm-0">
+                                    <a href="#">Login</a>
+                                    <a href="#">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer section end-->
